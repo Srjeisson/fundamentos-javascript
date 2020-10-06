@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>clases javascript</title>
+</head>
+
+<body>
+   <script>
+      /* apartir del 2015 contamos con las clases
+      aunque son prototipos  */
+
+      class persona {
+         constructor(nombre, apellido, altura) {
+            this.nombre = nombre
+            this.apellido = apellido
+            this.altura = altura
+         }
+         saludar() {                                 // ---> esta es la estructura de los prototiós 
+            console.log(`hola me llamo ${this.nombre} ${this.apellido} y mido ${this.altura}cm`)
+         }
+         soyAlto() {
+            return this.altura > 1.8
+         }
+      }
+
+      var jeisson = new persona('jeisson', 'rico', 1.81)
+      var erika = new persona('erika', 'gonzales', 1.78)
+      var manuel = new persona('manuel', 'cruz', 1.75)
+
+
+      class desarrollador extends persona {           // ---> debemos conectar con la clase padre esto con EXTENDS y
+         constructor(nombre, apellido, altura) {      //      el nombre de la clase padre 
+            super(nombre, apellido, altura)           // ---> debemos llamar al constructor padre con la palabara super
+         }
+         saludar() {
+            console.log(`hola me llamo ${this.nombre} ${this.apellido} y soy desarrollador/a`)
+         }
+      }
+
+      var oscar = new desarrollador('oscar', 'rico', 1.70)
+      var juliana = new desarrollador('juliana', 'gonzales', 1.85)
+      var felipe = new desarrollador('felipe', 'cruz', 1.70)
+
+
+      for (var i = 0; i < 1; i++) {
+         console.log(jeisson.saludar(), jeisson.soyAlto())
+         console.log(erika.saludar(), erika.soyAlto())
+         console.log(manuel.saludar(), manuel.soyAlto())
+         console.log(oscar.saludar()), oscar.soyAlto()
+         console.log(juliana.saludar(), juliana.soyAlto())
+         console.log(felipe.saludar(), felipe.soyAlto())
+      }
+
+      
+   </script>
+</body>
+
+</html>

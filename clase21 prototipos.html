@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cómo funcionan las clases en JavaScript </title>
+</head>
+
+<body>
+   <script>
+      /*cuando hablamos de objetos en jacascript hablamos de prototipos y no tanto de clases*/
+
+      //para definir un prototipo debemos definir una funcion
+      /*function persona (){
+
+      }
+
+      var jeisson = new persona()
+      /*la palabra NEW seguido del prototipo nos crea un nuevo objeto */
+
+      function personas(nombre, apellido, altura) { // crear plantillas para objetos o prototipos
+         this.nombre = nombre
+         this.apellido = apellido
+         this.altura = altura
+      }
+
+      var jeisson = new personas('jeisson', 'rico', 1.81) // crear los objetos con la plantilla aterior
+      var erika = new personas('erika', 'gonzales', 1.78)
+      var manuel = new personas('manuel', 'cruz', 1.75)
+
+      personas.prototype.caracteristicas = function () {   // crear funciones para las personas en este caso saludar y altura
+         if (this.nombre === 'erika') {
+            this.altura > 1.80 ? console.log(`${this.nombre} es alta `) : console.log(`${this.nombre} es baja`) 
+
+         }else{
+            this.altura > 1.80 ? console.log(`${this.nombre} es alto `) : console.log(`${this.nombre} es bajo`) 
+         }
+         console.log(`hola me llamo ${this.nombre} ${this.apellido} y mido ${this.altura}cm`)         
+      }
+
+      jeisson.caracteristicas()
+      erika.caracteristicas()
+      manuel.caracteristicas()
+      
+
+
+     /* Un poco de teoría interesante vista en el video:
+
+      Hablar de objetos en javascript es hablar de prototipos.
+      this hace referencia al nuevo objeto que se acaba de crear.
+      la función que define al prototipo retorna implícitamente this, es decir retorna el nuevo objeto que se creo.
+      La palabra reservada new se utiliza para crear un nuevo objeto con el prototipo indicado.*/
+
+   </script>
+</body>
+
+</html>

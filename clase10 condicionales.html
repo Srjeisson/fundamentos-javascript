@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condicionales</title>
+</head>
+<body>
+    <script>
+        // clase #10 Condicionales --------------------------------------------------------------------------------------------------
+
+// Resumen de la clase 
+
+var jeisson = {                 
+    nombre: 'jeisson',
+    apellido: 'rico',
+    edad: 20
+}
+
+/*Utilizaremos un tipo de variable con valores booleanos
+'true' y 'false', por ejemplo para validar profesiones*/ 
+
+var jeisson = {                 
+    nombre: 'jeisson',
+    apellido: 'rico',
+    edad: 20,
+
+    ingeniero: true,
+    cociner: false,
+    cantante: false,
+    dj: false,
+    guitarrista: false,
+    drone: true
+}
+
+function imprimirProfesiones(persona){
+    console.log(`${persona.nombre} es:`)
+
+    if (persona.ingeniero){
+        console.log ('ingeniero')
+    }
+
+    if (persona.cocinero){
+        console.log ('cocinero')
+    }else {
+        console.log('no ere cocinero')
+    }
+    
+
+    if (persona.cantante){
+        console.log ('cantante')
+    }
+
+    if (persona.dj){
+        console.log ('dj')
+    }
+
+    if (persona.guitarrista){
+        console.log ('guitarrista')
+    }
+
+    if (persona.drone){
+        console.log ('drone')
+    }
+}
+
+imprimirProfesiones(jeisson)
+
+//reto imprimir si es mayor de edad 
+
+//OPCION 1
+
+var jeisson = {                 
+    nombre: 'jeisson',
+    apellido: 'rico',
+    edad: 20,
+}    
+
+function imprimirSiEsMayorDeEdad (personas){
+    var nombreEnMayusculas = personas.edad >= 20 ? personas.nombre + " " + 'eres mayor' : 'no soy mayor '
+    console.log(nombreEnMayusculas);
+}
+imprimirSiEsMayorDeEdad(jeisson)
+
+
+///OPCION #2
+
+var jeisson = {                 
+    nombre: 'jeisson',
+    apellido: 'rico',
+    edad: 20,
+}    
+
+function imprimirSiEsMayorDeEdad (personas){
+
+    if (personas.edad >= 18){
+        console.log('eres mayor de edad ')
+    }else{
+        console.log('no eres mayor de edad')
+    } 
+    
+}
+imprimirSiEsMayorDeEdad(jeisson)
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar un array
+    </title>
+</head>
+
+<body>
+    <script>
+        var paula = {
+            nombre: 'paula',
+            apellido: 'barros',
+            altura: 1.70
+        }
+        var juan = {
+            nombre: 'juan',
+            apellido: 'gonzales',
+            altura: 1.85
+        }
+        var carlos = {
+            nombre: 'carlos',
+            apellido: 'gutierres',
+            altura: 1.78
+        }
+        var camila = {
+            nombre: 'camila',
+            apellido: 'ruiz',
+            altura: 1.68
+        }
+
+
+        const esAlta = persona =>  persona.altura > 1.8
+        
+
+        var personas = [paula, juan, carlos, camila]
+
+        //para filtrar necesitamos un array y una condicion
+        //esa condicion es una funcion 
+
+        var personasAltas = personas.filter(esAlta)
+
+        console.log(personasAltas)
+
+    </script>
+</body>
+
+</html>

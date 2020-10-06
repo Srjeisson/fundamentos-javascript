@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transformar un array</title>
+</head>
+<body>
+    <script>
+        /* utilizaremos la funcion MAP esta nos devuelve
+        un nuevo array en el cual modifica cada uno de los
+        elementos que le pasemos del array original*/
+
+        //vamos a transformar la altura de metros a centimetros
+
+        
+        const personas = [
+            {nombre:'jeisson', edad: 20, altura: 1.73},
+            {nombre:'camila', edad: 18, altura: 1.75},
+            {nombre:'juan', edad: 23, altura: 1.80},
+            {nombre:'paula', edad: 21, altura: 1.68},
+        ]
+
+        /*const personasBajas = personas.filter(persona => persona.altura < 1.75)
+        console.log(personasBajas)*/
+
+        const pasarAlturaACms = persona => {
+            return {
+                ...persona,
+                altura: persona.altura * 100
+            }
+        }
+        var personasCms = personas.map(pasarAlturaACms)
+        console.table(personasCms)
+
+
+    </script>
+</body>
+</html>

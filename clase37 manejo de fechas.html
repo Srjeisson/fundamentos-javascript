@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Manejo de fechas</title>
+</head>
+
+<body>
+   <script>
+      //  Hace cuantos dias nacisite 
+
+
+
+
+      /*function diasEntreFechas(fecha1, fecha2) {
+         // podemos sumar o restar fechas
+         let pregunta = prompt('año, mes y dia')
+         
+         const unDia = 1000 * 60 * 60 * 24 
+         const diferencia = Math.abs(fecha1 - fecha2)
+
+         
+         return Math.floor(diferencia / unDia)
+      }
+
+      const hoy = new Date()
+      const nacimiento = new Date (pregunta)
+ 
+      diasEntreFechas(hoy, nacimiento)*/
+
+
+      var año = prompt('Que año naciste?')
+      var mes = prompt('que mes naciste?') - 1
+      var dia = prompt('que día naciste?')
+
+      let persona = {
+         nombre: 'Jeisson',
+         apellido: 'Rico',
+         nacimiento: new Date(año, mes, dia)
+      }
+
+
+      const hoy = new Date()
+
+      function diasEntreFechas(fecha1, fecha2) {
+         const unDia = 1000 * 60 * 60 * 24
+         const diferencia = Math.abs(fecha1 - fecha2)
+         return Math.floor(diferencia / unDia)
+
+      }
+
+      console.log((`hola! naciste hace: ${diasEntreFechas(hoy, persona.nacimiento)} días`))
+      var n = diasEntreFechas(hoy, persona.nacimiento) / 365
+      var numero = n.toFixed(2)
+      console.log(`que siendo un poco mas claros serian: ${numero} años :)`)
+
+
+
+
+
+   </script>
+</body>
+
+</html>

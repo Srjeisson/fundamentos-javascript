@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a arrays
+    </title>
+</head>
+<body>
+    
+    <script>
+        //estas estructuras de datos nos permiten agrupar datos (strings, numeros etc) dentro de una coleccion
+        // despues podemos hacer operaciones con esta coleccion 
+
+        var paula = {
+            nombre: 'paula',
+            apellido: 'barros',
+            altura: 1.70
+        }
+        var juan = {
+            nombre: 'juan',
+            apellido: 'gonzales',
+            altura: 1.80
+        }
+        var carlos = {
+            nombre: 'carlos',
+            apellido: 'gutierres',
+            altura: 1.78
+        }
+        var camila = {
+            nombre: 'camila',
+            apellido: 'ruiz',
+            altura: 1.68
+        }
+
+        // Lo anterior lo podemos hacer dentro de un array :
+        var personas = [paula, juan, carlos, camila]
+
+        //podemos acceder a cada objeto o elemnto
+        //para acceder a la posicion del objeto
+        //---personas[0]
+
+        //para acceder a algun atributo del objeto
+        //---personas[0].apellido
+        //---personas[0]['apellido']
+
+        //podemos recorer el array :
+        for (let i = 0; i < personas.length; i++) {
+            var persona = personas[i]
+            console.log(`${persona .nombre} mide ${persona.altura}mts `)
+            
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cómo funciona el tiempo en JavaScript</title>
+</head>
+
+<body>
+   <script>
+
+
+
+      /*console.log('a')
+      console.log('b')
+      console.log('c')*/
+
+      /*si queremos ejecutar algo durante x tiempo 
+      debemos hacer lo siguiente  */
+
+      /*console.log('a')
+
+
+      setTimeout(() => {          //--> esta funcion recibe diferentes parametros
+         console.log('B')         // --> aqio se pone el codigo a ejecutar   
+      }, 2000);                  //--> el tiempo en milisegundosn para que se pueda ejecutar
+
+      console.log('c')
+
+      //----------------------------------------------------------------------------------------------------------
+
+
+      console.log('a')
+
+
+      setTimeout(() => {          
+         console.log('B')        //--> que pasa si le ponemos 0 segundos para su ejecucucion ?
+      }, 0);                  
+
+      console.log('c')
+
+      /*la respuesta sera igual que en la del ejercicio anterior ( a, c, y b ), pero porque ?
+      lo que hace el navegador es ejecutar el primer console log, cuando llega al timeout lo manda a otra cola
+      y cuando ejecuta el tercer console.log 0 segundos despues osea inmediatamente nos da nuestro 
+      timeout o segundo console.log*/
+
+
+      // ejemplo #2
+
+      /*setTimeout(() => {
+         console.log('d')
+      }, 2000);*/
+
+      //que pasa si ejecutamos esta funcion pero nuestro programa es muy largo? lo emularemos con un for
+
+      setTimeout(() => console.log('d'), 2000)
+      for (var i = 0; i < 1000000000; i++) {
+
+      }
+
+      //cuando realizamos tareas asincronas y les asignamos un tiempo este es un tiempo minimo ya que a 
+      //javascript le puede tardar mas o menos ejecutar el codigo principal
+
+   </script>
+</body>
+
+</html>

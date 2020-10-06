@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Modificando un prototipo </title>
+</head>
+
+<body>
+   <script>
+
+      function personas(nombre, apellido, altura) {
+         this.nombre = nombre
+         this.apellido = apellido
+         this.altura = altura
+      }
+
+      var jeisson = new personas('jeisson', 'rico', 1.81)
+      var erika = new personas('erika', 'gonzales', 1.78)
+      var manuel = new personas('manuel', 'cruz', 1.75)
+
+      personas.prototype.saludar = function () {   // el prototype es un objeto mas de javascript 
+         console.log(`hola me llamo ${this.nombre} ${this.apellido} y mido ${this.altura}cm`)
+      }
+
+      personas.prototype.soyAlto = function () {  // definir los prototipos al iniciar 
+         return this.altura > 1.8
+      }
+
+      for (var i = 0; i < 1; i++) {
+         console.log(jeisson.saludar(), jeisson.soyAlto())
+         console.log(erika.saludar(), erika.soyAlto())
+         console.log(manuel.saludar(), manuel.soyAlto())
+
+      }
+
+      /*El prototipo es un objeto más de JS , a partir de que lo modifiquemos, éste va a quedar modificado.
+
+Es de mucha importancia donde colocamos las funciones que va a tener el prototipo . Estos se deben de colocar juntos, ya que con ellos se va creando el prototipo del objeto, y deseamos que tenga juntas todas sus funciones.
+
+Por ello definimos los prototipos arriba, y los utilizamos a lo largo del código.
+
+NOTA: Cuando tenemos un error en JS, éste no se sigue ejecutando, se corta ahí la ejecución del código.*/
+
+   </script>
+</body>
+
+</html>

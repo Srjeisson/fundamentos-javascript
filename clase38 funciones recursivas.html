@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>funcione recursivas</title>
+</head>
+<body>
+   <script>
+      /*
+         13 /_4__
+
+         13 - 4 = 9     1
+         9  - 4 = 5     1
+         5  - 4 = 1     1
+      X  1  - 4 = -3
+      */
+
+      function divisionEntera(dividendo, divisor) {
+         //para hacer recursividad necesitamos 2 cosas 
+         // 1. un caso base y 2. un caso recursivo
+         if (dividendo < divisor) {
+            return 0
+         }
+         return 1 + divisionEntera(dividendo - divisor, divisor)
+      }
+
+   </script>
+</body>
+</html>

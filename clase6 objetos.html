@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objetos</title>
+</head>
+<body>
+    <script>
+        //clase #6 Onjetos-----------------------------------------------------------------------------------
+
+var jeisson = {
+    nombre:'jeisson',
+    apellido: 'rico',
+    edad: 20
+}
+
+var dario = {
+    nombre:  'dario',
+    apellido: 'ramirez',
+    edad:  22
+}
+
+//acceder al objeto
+
+function imprimirNombreEnMayusculas(nombre) {
+    nombre = nombre.toUpperCase()
+    console.log(nombre)
+}
+
+imprimirNombreEnMayusculas(jeisson.nombre)
+imprimirNombreEnMayusculas(dario.nombre)
+
+//forma mejorada #1 
+
+function imprimirNombreEnMayusculas(persona) {
+    var nombre = persona.nombre.toUpperCase()
+    console.log(nombre)
+}
+
+imprimirNombreEnMayusculas(jeisson)
+imprimirNombreEnMayusculas(dario)
+
+//forma mejorada #2
+
+function imprimirNombreEnMayusculas(persona) {
+    console.log(persona.nombre.toUpperCase())
+}
+
+imprimirNombreEnMayusculas(jeisson)
+imprimirNombreEnMayusculas(dario)
+imprimirNombreEnMayusculas({nombre : 'pepito'})   //-->  se ejecuta la funcion con el nombre 'pepito'
+
+    </script>
+</body>
+</html>

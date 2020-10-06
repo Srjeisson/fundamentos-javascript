@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Arrow functions</title>
+</head>
+
+<body>
+    <script>
+
+        
+// clase #12 Arrow functions----------------------------------------------------------------------------------------------------
+
+var juan = {
+    nombre: 'juan',
+    apellido: 'garcias',
+    edad: 25,
+}
+
+
+const MAYORIA_DE_EDAD = 18;
+
+//const esMayorDeEdad = (persona) =>     --->
+//var esMayorDeEdad = function(persona)  ---> Funcion anonima
+function esMayorDeEdad(persona) {
+    return persona.edad >= MAYORIA_DE_EDAD
+}
+
+function imprimirSiEsMayorDeEdad(persona) {
+    if (esMayorDeEdad(persona)) {
+        console.log(`${persona.nombre} es mayor de edad`)
+    } else {
+        console.log(`${persona.nombre} es menor de edad`)
+    }
+}
+
+//se puede reducir aun mas el codigo
+
+function esMayorDeEdad(persona) {
+    return persona.edad >= MAYORIA_DE_EDAD
+}
+
+//simplificada 
+const esMayorDeEdad = persona => persona.edad >= MAYORIA_DE_EDAD;
+
+//simplificar al maximo 
+const esMayorDeEdad = ({edad}) => edad >= MAYORIA_DE_EDAD;
+
+//denegar acceso con una funcion 
+function permitirAcceso (persona){
+    if (!esMayorDeEdad(persona)) {
+        console.log(`acceso denegado`)
+    }
+}
+
+
+    </script>
+</body>
+
+</html>

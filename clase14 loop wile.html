@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ciclos wile</title>
+</head>
+<body>
+    <script>
+        //repetir un codigo hasta que se cumpla una condicion 
+
+        var jeisson = {
+            nombre: 'jeisson',
+            apellido: 'rico',
+            edad: 20,
+            peso: 75
+        }
+
+        console.log(`Al inicio del año ${jeisson.nombre} pesa ${jeisson.peso}kg`)
+
+      
+
+        const INCREMENTO_PESO = 0.3
+        const DIAS_DEL_AÑO = 365
+
+        const aumentarDePeso = persona => persona.peso += INCREMENTO_PESO
+        const adelgazar = persona => persona.peso -= INCREMENTO_PESO
+        const comeMucho = () => Math.random() < 0.3
+        const realizaEjercicio = () => Math.random() < 0.4
+
+        const META = jeisson.peso - 3
+        var dias = 0
+
+        /*wile( condicion ){
+            el codigo que esta entre llaves se va repetir siempre que la condicion se cumpla 
+        }*/
+
+        while (jeisson.peso > META) {
+
+            if (comeMucho()) {
+                // aumentar de peso 
+                aumentarDePeso(jeisson)
+            }
+            if (realizaEjercicio()) {
+                // adelgazar de peso 
+                adelgazar(jeisson)
+            }
+            dias += 1
+        }
+
+        console.log(`pasaron ${dias} dias hasta que ${jeisson.nombre} adelgazo a  ${jeisson.peso.toFixed(1)}kg `)
+    </script>
+</body>
+</html>

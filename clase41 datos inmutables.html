@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> datos inmutables </title>
+</head>
+<body>
+   <script>
+      const jeisson = {
+         nombre: 'jeisson',
+         apellido: 'rico',
+         edad: 20
+      }
+
+      //const cumpleaños = persona => persona.edad++
+      const cumpleañosInumutable = performance =>({
+         ...persona, 
+         edad: persona.edad + 1
+      })
+   </script>
+</body>
+</html>

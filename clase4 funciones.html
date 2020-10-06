@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funciones</title>
+</head>
+<body>
+    <script>
+        //clase #4 Funciones -----------------------------------------------------------------------------------
+
+var nombre = 'jeisson' , edad = 20
+function imprimirEdad () {
+    console.log(`${nombre} tiene ${edad} años`)
+}
+
+imprimirEdad()
+
+//Reutilizar codigo 
+var nombre = 'jeisson' , edad = 20
+function imprimirEdad (n, e) {
+    console.log(`${n} tiene ${e} años`)
+}
+
+imprimirEdad(nombre, edad)
+imprimirEdad('carlos', 15)
+imprimirEdad('maria', 28)
+imprimirEdad('dario', 50)
+    </script>
+</body>
+</html>

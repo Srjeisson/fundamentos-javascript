@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alcance de las funciones</title>
+</head>
+<body>
+   <script>
+       //clase #5 Alcance de las funciones ----------------------------------------------------------------------
+
+var nombre = 'jeisson';
+function imprimirNombreEnMayusculas() {           //de esta manera la variable nombre se cambia
+    nombre = nombre.toUpperCase()                 //para que esto no suceda debemos utilizar 
+    console.log(nombre)                           //parametros, como en el siguiente ejemplo 
+}                                                                      
+imprimirNombreEnMayusculas()                                          
+                                                                      
+
+var nombre = 'jeisson';
+function imprimirNombreEnMayusculas(n) {
+    n = n.toUpperCase()
+    console.log(n)
+}
+imprimirNombreEnMayusculas(nombre)
+ 
+    </script> 
+</body>
+</html>

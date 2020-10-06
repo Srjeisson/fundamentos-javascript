@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Reducir un array a un valor
+   </title>
+</head>
+<body>
+   <script>
+      /* nos reduce un array a un valor unico */
+
+      const personas = [
+            {nombre:'jeisson', edad: 20, altura: 1.73, cantidadDeLibros:111 },
+            {nombre:'camila', edad: 18, altura: 1.75, cantidadDeLibros:78 },
+            {nombre:'juan', edad: 23, altura: 1.80, cantidadDeLibros:132 },
+            {nombre:'paula', edad: 21, altura: 1.68, cantidadDeLibros:90 },
+        ]
+
+        const reducer = (acum, persona) => {
+           return acum + persona.cantidadDeLibros
+        }
+        var totalDelibros = personas.reduce(reducer, 0)
+        console.log(`en total todos tiene ${totalDelibros} libros`)
+
+        //tambien se puede sumar la cantidad de libros con un ciclo FOR:
+        
+        var acum = 0;
+        for (let i = 0; i < personas.length; i++) {
+            acum = acum + personas[i].cantidadDeLibros
+         }
+         console.log(`en total todos tiene ${acum} libros`)
+         
+   </script>   
+</body>
+</html>

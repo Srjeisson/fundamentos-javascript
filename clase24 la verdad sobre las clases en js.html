@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>la verdad sobre las clases en javascript</title>
+</head>
+
+<body>
+   <script>
+
+      function heredaDe(prototipohijo, prototipopadre) {
+         var fn = function () { }
+         fn.prototype = prototipopadre.prototype
+         prototipohijo.prototype = new fn
+         prototipohijo.prototype.constructor = prototipohijo
+      }
+
+      function personas(nombre, apellido, altura) {
+         this.nombre = nombre
+         this.apellido = apellido
+         this.altura = altura
+      }
+
+       var jeisson = new personas('jeisson', 'rico', 1.81)
+       var erika = new personas('erika', 'gonzales', 1.78)
+       var manuel = new personas('manuel', 'cruz', 1.75)
+
+      personas.prototype.saludar = function () {   // el prototype es un objeto mas de javascript 
+         console.log(`hola me llamo ${this.nombre} ${this.apellido} y mido ${this.altura}cm`)
+      }
+      personas.prototype.soyAlto = function () {  // definir los prototipos al iniciar 
+         return this.altura > 1.8
+      }
+
+      function desarrollador(nombre, apellido, altura) {
+         this.nombre = nombre
+         this.apellido = apellido
+         this.altura = altura
+      }
+
+      heredaDe(desarrollador, personas)
+
+      var oscar = new desarrollador('oscar', 'rico', 1.70)
+       var juliana = new desarrollador('juliana', 'gonzales', 1.85)
+       var felipe = new desarrollador('felipe', 'cruz', 1.70)
+
+
+      desarrollador.prototype.saludar = function () {
+         console.log(`hola me llamo ${this.nombre} ${this.apellido} y soy desarrollador/a`)
+      }
+
+
+      for (var i = 0; i < 1; i++) {
+         console.log(jeisson.saludar(), jeisson.soyAlto())
+         console.log(erika.saludar(), erika.soyAlto())
+         console.log(manuel.saludar(), manuel.soyAlto())
+         console.log(oscar.saludar(), oscar.soyAlto())
+         console.log(juliana.saludar(), juliana.soyAlto())
+         console.log(felipe.saludar(), felipe.soyAlto())
+      }
+   </script>
+</body>
+
+</html>

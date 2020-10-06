@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parámetros como referencia o como valo</title>
+</head>
+<body>
+    <script>
+        //clase #8 Parámetros como referencia o como valor-------------------------------------------------------------------------
+
+/*Los objetos se comportan de manera diferente en funciones
+Si se le pasa un objeto como parámetro a una función, está forma una referencia
+¿ Qué es una referencia ?
+Es un conector a la misma variable, si se modifica el conector, se modifica la variable original. 
+para solucionar esto se puede crear un objeto diferente.
+Esto se hace colocando tres puntos antes del nombre. Ej ...persona.*/
+
+var juan = {
+    nombre: 'juan',
+    apellido: 'Ponce',
+    edad: 25,
+}
+
+/* 1er ejemplo
+
+paso el objeto juan por parámetro, lo que hace es modificarme la edad dentro de la funcion y afuera */
+
+function cumpleanios(persona){
+    //persona.edad= persona.edad +1;
+    persona.edad += 1;
+}
+cumpleanios(juan);
+
+/* 2do ejemplo
+
+paso solo la edad por parámetro, me modifica solamente la edad dentro de la función
+(no modifica el atributo del objeto fuera de la función)*/
+
+function cumpleanio(edad){
+    edad+=1;
+}
+cumpleanio (juan.edad)
+
+var juancho = function cumpleanio(persona){
+    return {
+    ...persona,
+    edad:persona.edad + 1
+    }
+}
+/* sacando la variable juancho, se iguala a cumpleanio y se pasa el objeto(juan) 
+ var juanMasViejo=cumpleanio(juan)*/
+var juanMasViejo=juancho(juan);
+
+
+
+/*Cuando es por valor, la información de la variable se almacenan en una 
+dirección de memoria diferente al recibirla en la funcion, por lo tanto si el 
+valor de esa variable cambia no afecta la variable original, solo se modifica dentro del 
+contexto de la función.
+
+Cuando es por referencia, la variable que se recibe como parámetro en la función apunta 
+exactamente a la misma dirección de memoria que la variable original por lo que si dentro
+ de la función se modifica su valor también se modifica la variable original. */
+    </script>
+</body>
+</html>

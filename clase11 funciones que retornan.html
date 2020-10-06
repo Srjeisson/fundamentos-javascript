@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funciones que retornan</title>
+</head>
+<body>
+    <script>
+        //clase #11 Funciones que retornan valores------------------------------------------------------------------------------
+
+//manera de deglozar las funciones en funciones mas pequeñas y retornar valores 
+
+
+var juan = {
+    nombre: 'juan',
+    apellido: 'garcias',
+    edad: 25,
+}
+
+function imprimirSiEsMayorDeEdad (personas){
+
+    if (personas.edad >= 18){
+        console.log(`${personas.nombre} ` + 'es mayor de edad ')
+    }else{
+        console.log(   `${personas.nombre} ` + 'no es mayor de edad')
+    } 
+}
+
+imprimirSiEsMayorDeEdad(juan)
+
+
+//para mejorar esta funcion lo podemos hacer asi: 
+
+function esMayorDeEdad (personas){
+    return personas.edad >= 18
+}
+
+function imprimirSiEsMayorDeEdad (personas){
+
+    if (esMayorDeEdad(personas)){
+        console.log(`${personas.nombre} ` + 'es mayor de edad ')
+    }
+    else{
+        console.log(   `${personas.nombre} ` + 'no es mayor de edad')
+    } 
+}
+
+imprimirSiEsMayorDeEdad(juan)
+    </script>
+</body>
+</html>

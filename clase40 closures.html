@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> closures  </title>
+</head>
+<body>
+   <script>
+      /* es una funcion que recuerdael estado de las 
+      cosas cuando fue invocada */
+
+      function crearSaludo(finalDeFrase) {
+         return function (nombre) {
+            console.log(`hola ${nombre} ${finalDeFrase} `)
+         }
+      }
+
+      const saludoArgentino = crearSaludo('che')
+      const saludoMexicano = crearSaludo('wey')
+      const saludoColombiano = crearSaludo('amigo')
+
+      saludoArgentino('jeisson')
+      saludoMexicano('jeisson')
+      saludoColombiano('jeisson')
+   </script>
+</body>
+</html>

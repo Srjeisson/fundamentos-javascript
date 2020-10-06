@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ciclo for </title>
+</head>
+
+<body>
+    <script>
+        var jeisson = {
+            nombre: 'jeisson',
+            apellido: 'rico',
+            edad: 20,
+            peso: 75
+        }
+
+        console.log(`Al inicio del año ${jeisson.nombre} pesa ${jeisson.peso}kg`)
+
+        /*for (inicial, condicion, incremento){
+             //codigo que se repite
+        }*/
+
+        const INCREMENTO_PESO = 0.2
+        const DIAS_DEL_AÑO = 365
+
+        const aumentarDePeso = persona => persona.peso += INCREMENTO_PESO
+        const adelgazar = persona => persona.peso -= INCREMENTO_PESO
+
+        for (var i = 1; i <= DIAS_DEL_AÑO ; i++) {
+            var ramdom = Math.random();
+
+            if (ramdom <= 0.25) {
+                //aumenta de peso 
+                aumentarDePeso(jeisson)
+            } else if (ramdom <= 0.50) {
+                // adelgazar
+                adelgazar(jeisson)
+            }
+        }
+
+        console.log(`Al final del año ${jeisson.nombre} pesa ${jeisson.peso.toFixed(1)}kg`)
+
+
+      
+
+
+
+    </script>
+</body>
+
+</html>
